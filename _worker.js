@@ -110,12 +110,12 @@ export default {
   async fetch(request, env, ctx) {
     try {
       const {
-        PROXY_HOSTNAME = "cn-cd.whohh.cn",
+        PROXY_HOSTNAME = "cn-cd.whohh.cn:18096",
         PROXY_PROTOCOL = "https",
         PATHNAME_REGEX,
         UA_WHITELIST_REGEX = "(curl)",
         UA_BLACKLIST_REGEX,
-        URL302 = "http://cn-cd.whohh.cn:18096",
+        URL302,
         IP_WHITELIST_REGEX,
         IP_BLACKLIST_REGEX,
         REGION_WHITELIST_REGEX,
