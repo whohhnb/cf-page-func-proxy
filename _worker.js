@@ -81,27 +81,43 @@ async function replaceResponseText(
 }
 
 async function nginx() {
-  return `<!DOCTYPE html>
+  return `<!doctype html>
 <html>
 <head>
-<title>Welcome to nginx!</title>
-<style>
-html { color-scheme: light dark; }
-body { width: 35em; margin: 0 auto;
-font-family: Tahoma, Verdana, Arial, sans-serif; }
-</style>
+    <meta charset="utf-8">
+    <title>恭喜，站点创建成功！</title>
+    <style>
+        .container {
+            width: 60%;
+            margin: 10% auto 0;
+            background-color: #f0f0f0;
+            padding: 2% 5%;
+            border-radius: 10px
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+            ul li {
+                line-height: 2.3
+            }
+
+        a {
+            color: #20a53a
+        }
+    </style>
 </head>
 <body>
-<h1>Welcome to nginx!</h1>
-<p>If you see this page, the nginx web server is successfully installed and
-working. Further configuration is required.</p>
-
-<p>For online documentation and support please refer to
-<a href="http://nginx.org/">nginx.org</a>.<br/>
-Commercial support is available at
-<a href="http://nginx.com/">nginx.com</a>.</p>
-
-<p><em>Thank you for using nginx.</em></p>
+    <div class="container">
+        <h1>恭喜, 站点创建成功！</h1>
+        <h3>这是默认index.html，本页面由系统自动生成</h3>
+        <ul>
+            <li>本页面在FTP根目录下的index.html</li>
+            <li>您可以修改、删除或覆盖本页面</li>
+            <li>FTP相关信息，请到“面板系统后台 > FTP” 查看</li>
+        </ul>
+    </div>
 </body>
 </html>`;
 }
